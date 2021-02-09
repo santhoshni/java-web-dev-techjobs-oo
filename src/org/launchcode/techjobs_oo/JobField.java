@@ -33,6 +33,10 @@ public abstract class JobField {
 
     @Override
     public String toString() {
+
+        if(this.value.isEmpty()){
+            this.setValue("Data not available");
+        }
         return value;
     }
 
@@ -48,6 +52,8 @@ public abstract class JobField {
     public int hashCode() {
         return Objects.hash(getId());
     }
+
+
 
 
 }
